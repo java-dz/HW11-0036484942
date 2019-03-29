@@ -14,29 +14,29 @@ import javax.swing.JFrame;
  */
 public class FormLocalizationProvider extends LocalizationProviderBridge {
 
-	/**
-	 * Constructs an instance of {@code FormLocalizationProvider} with the
-	 * specified parameters.
-	 * 
-	 * @param parent localization provider from which strings are taken.
-	 * @param frame frame to be connected and disconnected
-	 */
-	public FormLocalizationProvider(ILocalizationProvider parent, JFrame frame) {
-		super(parent);
-		
-		frame.addWindowListener(new WindowAdapter() {
-			
-			@Override
-			public void windowOpened(WindowEvent e) {
-				connect();
-			}
-			
-			@Override
-			public void windowClosed(WindowEvent e) {
-				disconnect();
-			}
-			
-		});
-	}
+    /**
+     * Constructs an instance of {@code FormLocalizationProvider} with the
+     * specified parameters.
+     *
+     * @param parent localization provider from which strings are taken.
+     * @param frame frame to be connected and disconnected
+     */
+    public FormLocalizationProvider(ILocalizationProvider parent, JFrame frame) {
+        super(parent);
+
+        frame.addWindowListener(new WindowAdapter() {
+
+            @Override
+            public void windowOpened(WindowEvent e) {
+                connect();
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                disconnect();
+            }
+
+        });
+    }
 
 }

@@ -9,28 +9,28 @@ package hr.fer.zemris.java.hw11.jnotepadpp.localization;
  */
 public interface ILocalizationProvider {
 
-	/**
-	 * Adds the specified <tt>ILocalizationListener l</tt> to a collection of
-	 * listeners.
-	 * 
-	 * @param l localization listener to be added
-	 */
-	void addLocalizationListener(ILocalizationListener l);
+    /**
+     * Adds the specified <tt>ILocalizationListener l</tt> to a collection of
+     * listeners.
+     *
+     * @param l localization listener to be added
+     */
+    void addLocalizationListener(ILocalizationListener l);
 
-	/**
-	 * Removes the specified <tt>ILocalizationListener l</tt> from a collection
-	 * of listeners.
-	 * 
-	 * @param l localization listener to be removed
-	 */
-	void removeLocalizationListener(ILocalizationListener l);
-	
-	/**
-	 * Returns a {@code String} associated to the specified <tt>key</tt>.
-	 * 
-	 * @param key key whose string is to be returned
-	 * @return a String associated to the specified key
-	 */
-	String getString(String key);
-	
+    /**
+     * Removes the specified <tt>ILocalizationListener l</tt> from a collection
+     * of listeners.
+     *
+     * @param l localization listener to be removed
+     */
+    void removeLocalizationListener(ILocalizationListener l);
+
+    /**
+     * Returns a {@code String} associated to the specified <tt>key</tt>.
+     *
+     * @param key key whose string is to be returned
+     * @return a String associated to the specified key
+     */
+    String getString(String key);
+
 }

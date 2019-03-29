@@ -10,36 +10,36 @@ import java.util.List;
  * @author Mario Bobic
  */
 public abstract class AbstractLocalizationProvider implements ILocalizationProvider {
-	
-	/** Localization listeners. */
-	private List<ILocalizationListener> listeners;
-	
-	/**
-	 * Constructs an instance of {@code AbstractLocalizationProvider}.
-	 */
-	public AbstractLocalizationProvider() {
-		listeners = new ArrayList<>();
-	}
 
-	@Override
-	public void addLocalizationListener(ILocalizationListener l) {
-		listeners = new ArrayList<>(listeners);
-		listeners.add(l);
-	}
+    /** Localization listeners. */
+    private List<ILocalizationListener> listeners;
 
-	@Override
-	public void removeLocalizationListener(ILocalizationListener l) {
-		listeners = new ArrayList<>(listeners);
-		listeners.remove(l);
-	}
-	
-	/**
-	 * Fires a localization change event to all registered listeners.
-	 */
-	public void fire() {
-		for (ILocalizationListener l : listeners) {
-			l.localizationChanged();
-		}
-	}
+    /**
+     * Constructs an instance of {@code AbstractLocalizationProvider}.
+     */
+    public AbstractLocalizationProvider() {
+        listeners = new ArrayList<>();
+    }
+
+    @Override
+    public void addLocalizationListener(ILocalizationListener l) {
+        listeners = new ArrayList<>(listeners);
+        listeners.add(l);
+    }
+
+    @Override
+    public void removeLocalizationListener(ILocalizationListener l) {
+        listeners = new ArrayList<>(listeners);
+        listeners.remove(l);
+    }
+
+    /**
+     * Fires a localization change event to all registered listeners.
+     */
+    public void fire() {
+        for (ILocalizationListener l : listeners) {
+            l.localizationChanged();
+        }
+    }
 
 }

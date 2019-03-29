@@ -13,39 +13,39 @@ import java.util.prefs.Preferences;
  * @author Mario Bobic
  */
 public class ResourceLanguage {
-	
-	/** The default used language. */
-	public static final String DEFAULT_LANGUAGE = "en";
-	
-	/** Name of the language preference. */
-	private static final String PREFERENCE_NAME = "startup_language";
-	
-	/** The user preferences for choosing startup language. */
-	private static final Preferences prefs = Preferences.userNodeForPackage(ResourceLanguage.class);
 
-	/**
-	 * Disables instantiation.
-	 */
-	private ResourceLanguage() {
-	}
-	
-	/**
-	 * Returns the language from user preferences or
-	 * {@linkplain #DEFAULT_LANGUAGE} if the backing store is inaccessible.
-	 * 
-	 * @return the language from a user preferences or the default language
-	 */
-	public static String getResourceLanguage() {
-		return prefs.get(PREFERENCE_NAME, DEFAULT_LANGUAGE);
-	}
-	
-	/**
-	 * Sets the language to the user preferences as a new startup language.
-	 * 
-	 * @param language language to be set to the user preferences
-	 */
-	public static void setResourceLanguage(String language) {
-		prefs.put(PREFERENCE_NAME, language);
-	}
+    /** The default used language. */
+    public static final String DEFAULT_LANGUAGE = "en";
+
+    /** Name of the language preference. */
+    private static final String PREFERENCE_NAME = "startup_language";
+
+    /** The user preferences for choosing startup language. */
+    private static final Preferences prefs = Preferences.userNodeForPackage(ResourceLanguage.class);
+
+    /**
+     * Disables instantiation.
+     */
+    private ResourceLanguage() {
+    }
+
+    /**
+     * Returns the language from user preferences or
+     * {@linkplain #DEFAULT_LANGUAGE} if the backing store is inaccessible.
+     *
+     * @return the language from a user preferences or the default language
+     */
+    public static String getResourceLanguage() {
+        return prefs.get(PREFERENCE_NAME, DEFAULT_LANGUAGE);
+    }
+
+    /**
+     * Sets the language to the user preferences as a new startup language.
+     *
+     * @param language language to be set to the user preferences
+     */
+    public static void setResourceLanguage(String language) {
+        prefs.put(PREFERENCE_NAME, language);
+    }
 
 }

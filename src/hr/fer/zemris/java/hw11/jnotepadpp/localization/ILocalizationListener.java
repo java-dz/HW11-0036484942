@@ -8,9 +8,9 @@ package hr.fer.zemris.java.hw11.jnotepadpp.localization;
  */
 public interface ILocalizationListener {
 
-	/**
-	 * Invoked when a change in localization occurs.
-	 */
-	void localizationChanged();
-	
+    /**
+     * Invoked when a change in localization occurs.
+     */
+    void localizationChanged();
+
 }
